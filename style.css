@@ -1,0 +1,108 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #D7E3D0; /* Misty Sage */
+  color: #2E2E2E; /* Charcoal */
+  overflow-x: hidden;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2E2E2E;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #999; /* Dusty Gray */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #8C9C78; /* Olive Gold */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 160px 80px 80px;
+  min-height: 100vh;
+  background-color: #D7E3D0;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.hero-content {
+  max-width: 600px;
+}
+.hero-content h1 {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: #2E2E2E;
+}
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #5a5a5a;
+}
+.cta-button {
+  background-color: #A6C4A0; /* Forest Mint */
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #8C9C78; /* Olive Gold */
+}
+
+/* Hero Logo */
+.hero-logo img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
